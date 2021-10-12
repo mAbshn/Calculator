@@ -1,0 +1,16 @@
+$font: 'Open Sans', sans-serif;
+
+.calc__expression {
+    padding: 5px;
+    width: 100%;
+    font-family: $font;
+    font-size: 24px;
+    text-align: right;
+    letter-spacing: 2px;
+    color: #5e5e5e;
+    border: none;
+    overflow: auto;
+    &:focus-visible {
+        outline: none;
+    }
+}

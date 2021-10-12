@@ -1,0 +1,16 @@
+
+
+$gray: #e0e2e6;
+$lgray: #f1f3f4;
+$blue: #4086f4;
+$font: 'Open Sans', sans-serif;
+
+.calc__btn {
+    padding: 10px 0;
+    font-family: $font;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background: $lgray;
+    cursor: pointer;
+}
