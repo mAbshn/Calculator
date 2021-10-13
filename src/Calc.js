@@ -1,8 +1,7 @@
 import { useState } from "react";
-import Display from "./components/Display";
-import Keyboard from "./components/Keyboard";
+import CalcBody from "./components/CalcBody";
 import Theme from "./components/Theme";
-import { ColorContext } from "./context";
+import { Context } from "./context";
 import "./styles/Calc.scss";
 
 function Calc() {
@@ -12,23 +11,12 @@ function Calc() {
   const [color, setColor] = useState('#4086f4')
 
   return (
-    <ColorContext.Provider value={{color, setColor}}>
+    <Context.Provider value={{ color, setColor, input, setInput, result, setResult }}>
       <div className="calc">
-        <Display
-          input={input}
-          setInput={setInput}
-          result={result}
-          setResult={setResult}
-        />
-        <Keyboard
-          input={input}
-          setInput={setInput}
-          setResult={setResult}
-          result={result}
-        />
         <Theme />
+        <CalcBody/>
       </div>
-    </ColorContext.Provider>
+    </Context.Provider>
   );
 }
 

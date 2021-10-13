@@ -1,8 +1,12 @@
 import React from 'react';
+import { useContext } from 'react/cjs/react.development';
+import { Context } from '../../../context';
 import { btnClick } from '../../../utils/script';
 import cl from './MyInput.module.scss';
 
-const MyInput = ({ input, setInput, result, setResult }) => {
+const MyInput = () => {
+
+    const {input, setInput, result, setResult} = useContext(Context);
 
     return (
         <form>

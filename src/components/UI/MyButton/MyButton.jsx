@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { ColorContext } from '../../../context';
+import { Context } from '../../../context';
 import cl from './MyButton.module.scss';
 
 const MyButton = ({children, onClick}) => {
 
-    const {color, setColor} = useContext(ColorContext
-        );
+    const {color} = useContext(Context);
+
     let isDarkGray = children === '×' || children === '÷' || children === '(' || children === ')' || children === '%' || children === 'AC' || children === '-' || children === '+';
     let isBlue = children === '=';
 

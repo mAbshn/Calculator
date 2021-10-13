@@ -1,8 +1,8 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
+import { Context } from '../context';
+import arrow from '../img/arrow.svg';
 import "../styles/Calc.scss";
 import ThemeItem from './ThemeItem';
-import arrow from '../img/arrow.svg';
-import { ColorContext } from '../context';
 
 const Theme = () => {
 
@@ -11,7 +11,7 @@ const Theme = () => {
     const ref2 = useRef(null);
     const ref3 = useRef(null);
     
-    const {color, setColor} = useContext(ColorContext);
+    const {setColor} = useContext(Context);
 
     const blockMoving = () => {
         toggle.current.classList.toggle('_active');

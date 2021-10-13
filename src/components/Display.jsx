@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import MyInput from './UI/MyInput/MyInput';
+import { Context } from '../context';
 import "../styles/Calc.scss";
-import { ColorContext } from '../context';
+import MyInput from './UI/MyInput/MyInput';
 
-const Display = ({input, setInput, result, setResult}) => {
+const Display = () => {
 
-    const {color, setColor} = useContext(ColorContext); 
+    const {color, result} = useContext(Context);
 
     return (
         <div className="calc__display" style={{border: `1px solid ${color}`}}>
-            <MyInput input={input} setInput={setInput} result={result} setResult={setResult} />
+            <MyInput/>
             <div className="calc__result">{result}</div>
         </div>
     );
